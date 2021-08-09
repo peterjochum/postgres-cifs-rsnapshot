@@ -14,6 +14,6 @@ if [ -z "$CIFS_SHARE" ]; then
     exit 1
 fi
 
-OPTIONS="user=$CIFS_USERNAME,pass=***,$CIFS_OPTIONS"
-echo "Mounting $CIFS_SHARE to $RSNAPSHOT_ROOT ($OPTIONS)"
+OPTIONS="user=$CIFS_USERNAME,pass=$CIFS_PASSWORD,$CIFS_OPTIONS"
+echo "Mounting $CIFS_SHARE to $RSNAPSHOT_ROOT"
 mount.cifs "$CIFS_SHARE" "$RSNAPSHOT_ROOT" -o "$OPTIONS"
