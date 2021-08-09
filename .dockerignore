@@ -1,0 +1,17 @@
+# IDE stuff
+.vscode
+.idea
+
+# generated configs
+etc
+
+# credentials
+.env*
+
+# vcs
+.git
+.gitignore
+
+# docker
+Dockerfile
+docker-compose.yml

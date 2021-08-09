@@ -1,0 +1,8 @@
+.idea
+.vscode
+
+# Ignore generated configs
+etc
+
+# Protect credentials
+.env
