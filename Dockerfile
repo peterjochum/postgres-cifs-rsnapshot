@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 # Install software
 RUN apt-get update
 RUN apt-get install --no-install-recommends --yes \
-    rsnapshot postgresql-client cifs-utils gettext-base && \
+    rsnapshot postgresql-client cifs-utils keyutils gettext-base && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
