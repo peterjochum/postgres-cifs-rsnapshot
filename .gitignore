@@ -2,7 +2,7 @@
 .vscode
 
 # Ignore generated configs
-etc
+./etc/
 
 # Protect credentials
 .env
