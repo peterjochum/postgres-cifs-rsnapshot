@@ -14,8 +14,8 @@ COPY templates /templates/
 COPY usr/bin/* /usr/bin/
 
 # Set default parameters
-ENV RSNAPSHOT_ROOT=/rsnapshot-root
-RUN mkdir "${RSNAPSHOT_ROOT}"
+ENV BACKUP_ROOT=/rsnapshot-root
+RUN mkdir "${BACKUP_ROOT}"
 
 # Work at FS root (needed by write-config-templates)
 WORKDIR /

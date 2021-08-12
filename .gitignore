@@ -6,3 +6,6 @@
 
 # Protect credentials
 .env
+
+# Ignore experimental kubernetes deployment for the time being
+deployment/*

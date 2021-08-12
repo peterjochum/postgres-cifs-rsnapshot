@@ -1,7 +1,10 @@
 # Rsnapshot based PostgreSQL Backup for CIFS storage
 
-Mounts a CIFS share and executes a pg_dump command using
-rsnapshot retention settings.
+Mounts a CIFS share and perform a database backup.
+
+The backup is written with a timestamp such as `dbname-20210812-0913.backup`.
+
+When `USE_RSNAPSHOT` is set to true the configured backup rotations are applied.
 
 ## Usage
 
@@ -28,6 +31,9 @@ PGDATABASE=
 PGUSER=
 PGPASSWORD=
 
+# Use rsnapshot or simple write .backup to BACKUP_ROOT
+USE_RSNAPSHOT=true
+
 # Rsnapshot retention settings
 HOUR_STRING=hour
 HOUR_RETENTION=720
@@ -45,3 +51,4 @@ YEAR_RETENTION=100
 
 - [PostgreSQL environment variables](https://www.postgresql.org/docs/12/libpq-envars.html)
 - [Rsnapshot tutorial in ArchWiki](https://wiki.archlinux.org/title/rsnapshot)
+- [Fail fast bash scripting](https://dougrichardson.us/notes/fail-fast-bash-scripting.html)
