@@ -15,5 +15,5 @@ if [ -z "$CIFS_SHARE" ]; then
 fi
 
 OPTIONS="user=$CIFS_USERNAME,pass=$CIFS_PASSWORD,$CIFS_OPTIONS"
-echo "Mounting $CIFS_SHARE to $RSNAPSHOT_ROOT"
-mount.cifs "$CIFS_SHARE" "$RSNAPSHOT_ROOT" -o "$OPTIONS"
+echo "Mounting $CIFS_SHARE to $BACKUP_ROOT"
+mount.cifs "$CIFS_SHARE" "$BACKUP_ROOT" -o "$OPTIONS"

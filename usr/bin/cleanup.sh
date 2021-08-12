@@ -1,3 +1,3 @@
 #!/bin/bash
 # Cleanup mounts
-umount "$RSNAPSHOT_ROOT"
+umount "$BACKUP_ROOT"
