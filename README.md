@@ -51,3 +51,4 @@ YEAR_RETENTION=100
 
 - [PostgreSQL environment variables](https://www.postgresql.org/docs/12/libpq-envars.html)
 - [Rsnapshot tutorial in ArchWiki](https://wiki.archlinux.org/title/rsnapshot)
+- [Fail fast bash scripting](https://dougrichardson.us/notes/fail-fast-bash-scripting.html)

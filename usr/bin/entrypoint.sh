@@ -1,4 +1,7 @@
-#!/usr/bin/env -S bash -euET -o pipefail -O inherit_errexit
+#!/bin/bash
+set -euo pipefail
+shopt -s inherit_errexit
+
 write-config-templates.sh
 mount-backup-shares.sh
 if [ "$USE_RSNAPSHOT" == "true" ];
