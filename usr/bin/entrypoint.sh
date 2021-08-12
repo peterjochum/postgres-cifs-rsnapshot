@@ -13,5 +13,7 @@ echo "Backing up database"
 echo "switching to $BACKUP_ROOT"
 cd "$BACKUP_ROOT"
 backup-database.sh
+# Leave BACKUP_ROOT to allow cleanup.sh to unmount
+cd /
 fi
 cleanup.sh
