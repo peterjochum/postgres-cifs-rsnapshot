@@ -2,7 +2,7 @@ version: "3.3"
 services:
   backup:
     #build: .
-    image: pjochum/postgres-cifs-rsnapshot:1.1
+    image: pjochum/postgres-cifs-rsnapshot:latest
     env_file: .env
     privileged: true
     cap_add:

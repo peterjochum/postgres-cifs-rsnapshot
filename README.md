@@ -17,38 +17,11 @@ When `USE_RSNAPSHOT` is set to true the configured backup rotations are applied.
 
 ### Sample configuration
 
-```shell
-# mount.cifs (man mount.cifs)
-CIFS_SHARE=//my-server/share/
-CIFS_USERNAME=
-CIFS_PASSWORD=
-CIFS_OPTIONS=noserverino,sec=ntlmsspi,vers=3.11
-
-# Postgres variables (https://www.postgresql.org/docs/12/libpq-envars.html)
-PGHOST=
-PGPORT=5432
-PGDATABASE=
-PGUSER=
-PGPASSWORD=
-
-# Use rsnapshot or simple write .backup to BACKUP_ROOT
-USE_RSNAPSHOT=true
-
-# Rsnapshot retention settings
-HOUR_STRING=hour
-HOUR_RETENTION=720
-DAY_STRING=day
-DAY_RETENTION=180
-WEEK_STRING=week
-WEEK_RETENTION=108
-MONTH_STRING=month
-MONTH_RETENTION=60
-YEAR_STRING=year
-YEAR_RETENTION=100
-```
+See [sample.env](sample.env) for configuration options.
 
 ## References
 
 - [PostgreSQL environment variables](https://www.postgresql.org/docs/12/libpq-envars.html)
 - [Rsnapshot tutorial in ArchWiki](https://wiki.archlinux.org/title/rsnapshot)
 - [Fail fast bash scripting](https://dougrichardson.us/notes/fail-fast-bash-scripting.html)
+- [Timezone support in Ubuntu containers](https://gist.github.com/sidja/833eb9824ada2684773553824f28e910)

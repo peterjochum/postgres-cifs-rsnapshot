@@ -2,6 +2,7 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
+setup-timezone.sh
 write-config-templates.sh
 mount-backup-shares.sh
 if [ "$USE_RSNAPSHOT" == "true" ];

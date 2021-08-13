@@ -2,8 +2,9 @@ FROM ubuntu:20.04
 
 # Install software
 RUN apt-get update
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get install --no-install-recommends --yes \
-    rsnapshot postgresql-client cifs-utils keyutils gettext-base && \
+    rsnapshot postgresql-client cifs-utils keyutils gettext-base tzdata && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
